@@ -21,6 +21,26 @@ Converts MCNS input to provide OpenMC input XML files
   !   9. And need to declare cross_sections.xml in created inputs.
 
 
+Installation:
+
+1. if you have the git installed in your computer then:
+   1.1.  Run "git clone https://github.com/sachinshet1992/mcnp_to_openmc.git && make"
+
+		or
+
+2. Download to your desktop and run "make" in the source directory
+
+	After this you will have mcnp_to_openmc executable in the /bin/Release directory
+Using: 
+
+	1. keep the MCNP input file with filename "inp" the executable directory and run.
+	2. files with other names can be given as command line argument eg., ./mcnp_to_openmc filename
+
+Output: 
+	settings.xml, materials.xml and geometry.xml files will bw created.
+
+
+
   ! Other useful stuffs:
 
   !  https://youtu.be/mrfjxpSUFCg
