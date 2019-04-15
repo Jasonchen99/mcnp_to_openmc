@@ -38,14 +38,8 @@ Using:
   2. files with other names can be given as command line argument eg., ./mcnp_to_openmc filename
 
 Output: 
-	settings.xml, materials.xml and geometry.xml files will bw created.
+	settings.xml, materials.xml and geometry.xml files will be created.
 
-
-
-   Other useful stuffs:
-
-    https://youtu.be/mrfjxpSUFCg
-    https://youtu.be/5FIVyWB4MRc
 
 Contact:
 iamsachinshet@gmail.com
