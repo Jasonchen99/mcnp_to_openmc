@@ -20,7 +20,9 @@
 Installation:
 
 1. if you have the git installed in your computer then:
-Run "git clone https://github.com/sachinshet1992/mcnp_to_openmc.git && make"
+Run "git clone https://github.com/sachinshet1992/mcnp_to_openmc.git "
+    "cd mcnp_to_openmc"
+    "make"
 
 or
 
