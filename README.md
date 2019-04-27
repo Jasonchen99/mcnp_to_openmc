@@ -8,13 +8,11 @@
  
  1. In cell card only fill, u and imp:n are allowed
  2. trcl not allowed.
- 3. Complement operator can be used.  Eg.,  1 -2 #3
- #3 will be replaced by #(region of cell 3)
+ 3. Complement operator can be used.  Eg.,  1 -2 #3.. #3 will be replaced by #(region of cell 3)
  4. Surfaces of the cell which has zero importances take vacuum boundary condition
  5. Periodic and reflective surfaces are not allowed
  6. Cones and toriod are not allowed
-7. Isotopes names needd to be replaced with the names as per your OpenMC
-library in the generated materials.xml file
+7. Isotopes names needd to be replaced with the names as per your OpenMC library in the generated materials.xml file
 8. m, mt, ksrc and kcode are the only processable cards.
 9. And need to declare cross_sections.xml in created inputs.
 
