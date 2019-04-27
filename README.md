@@ -1,12 +1,11 @@
-!!
-!!  user guidelines
-!!
-!!   I hope you are familiar with the mcnp input specifications
-!!
-!!   For now this code handles only basic input cards of mcnp
-!!
-!!   The list of things to be taken care for now
-!!
+ user guidelines
+ 
+ I hope you are familiar with the mcnp input specifications
+
+ For now this code handles only basic input cards of mcnp
+ 
+ The list of things to be taken care for now
+ 
 !!     1. In cell card only fill, u and imp:n are allowed
 !!     2. trcl not allowed.
 !!     3. Complement operator can be used.  Eg.,  1 -2 #3
