@@ -1,3 +1,7 @@
+
+program mcnp_to_openmc
+
+!!  Converts MCNS input to provide OpenMC input XML files
 !!
 !!  user guidelines
 !!
@@ -41,3 +45,59 @@
 !!
 !!  Contact:
 !!  iamsachinshet@gmail.com
+
+  use input
+  use xmlwrite
+
+  implicit none
+
+  dev = .false.
+  fatalstop = .false.
+
+  call get_command(str1)
+
+  inpfile = sset(inputfilename(str1))
+
+  write(*,*)'!-------------------------!'
+  write(*,*)'!    MCNP to OpenMC       !'
+  write(*,*)'!     input convert       !'
+  write(*,*)'!-------------------------!'
+  write(*,*)
+  write(*,*)'MCNP input file = "',trim(adjustl(inpfile)),'"'
+  write(*,*)
+  write(*,*)'MCNP ->'
+  write(*,*)
+
+  call i_routines
+
+  if(fatalcount /= 0)call fatal(' Errors in input',.true.)
+
+  write(*,*)
+  write(*,*)'OpenMC ->'
+  write(*,*)
+
+  call write_xmls
+
+  deallocate(iinp)
+  deallocate(iusr)
+  deallocate(tcell)
+  deallocate(surf)
+  deallocate(mats)
+
+contains
+
+  ! Handle command line
+
+  function inputfilename(str)result(files)
+    integer :: n
+    character(125) :: str , files,wrd(10)
+    call split(str,wrd,n)
+    if(n<=1)then
+      files = 'inp'
+      return
+    end if
+    files = trim(adjustl(wrd(2)))
+  end function
+
+end program
+
